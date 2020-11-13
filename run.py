@@ -1,8 +1,7 @@
 
 
-from app import app
+from mdblog.app import app
 
 if __name__ == "__main__":
-    debug = False
-    host = "0.0.0.0"
-    app.run(host, debug=debug)
+    debug = True
+    app.run(debug=debug)

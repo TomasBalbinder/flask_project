@@ -1,4 +1,4 @@
-from app import *
+from mdblog.app import *
 
 from flask import url_for
 

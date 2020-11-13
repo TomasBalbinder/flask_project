@@ -19,4 +19,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.network "public_network", bridge: "Edimax nLite Wireless USB Adapter"
+
+  # install and configure software
+  config.vm.provision :shell, :path => "bootstrap.sh"
 end
