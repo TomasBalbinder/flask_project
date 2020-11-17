@@ -1,0 +1,20 @@
+{% extends "_main.html" %}
+
+{% block title %} articles {% endblock %}
+
+{% block main %} This page uses for something ...  {% endblock %}
+
+{% block body %}
+    {% if articles %}
+        <ul>
+            {% for id, value in articles %}
+                <li>
+                    <h2>{{ value.title }}</h2>
+                    <p>{{ value.content }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+            <p>No articles</p>
+    {% endif %}
+{% endblock %}

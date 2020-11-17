@@ -6,7 +6,6 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-
     <header>
         <h1><a href="{{ url_for("welcome_page") }}">Tomas Balbinder</a></h1>
     </header>
@@ -14,10 +13,23 @@
         <ul class="nav">
             <li><a href="{{ url_for("admin") }}">Admin</a></li>
             <li><a href="{{ url_for("about") }}">About me</a></li>
-            <li><a href="{{ url_for("back") }}">Return</a></li>
+            <li><a href="{{ url_for("articles") }}">Articles</a></li>
         </ul>
     </nav>
 
+    <main>
+
+        {% block main %} {% endblock %}
+
+    </main>
+
     {% block body %} {% endblock %}
+    <footer>
+
+        <p> (c) 2020 Tomas Balbinder</p>
+
+    </footer>
+
+
 </body>
 </html>
