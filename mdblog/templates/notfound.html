@@ -1,0 +1,21 @@
+{% extends "_main.html" %}
+
+{% block title %} page not found {% endblock %}
+
+{% block main %}
+    <h1>Opsss!</h1>
+    <h2>The page doenst exists.</h2>
+    <p>Unfortunately this page with number <strong>{{ id }}</strong> doesnt exists</p>
+    <div>
+        <a href="/" class="btn btn primary btn-lg">Home</a>
+        <a href={{url_for("articles")}} class="btn btn primary btn-lg">All articles</a>
+
+
+
+    </div>
+
+
+
+
+
+{% endblock %}

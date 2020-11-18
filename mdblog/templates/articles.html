@@ -2,14 +2,13 @@
 
 {% block title %} articles {% endblock %}
 
-{% block main %} This page uses for something ...  {% endblock %}
 
-{% block body %}
+{% block main %}
     {% if articles %}
         <ul>
             {% for id, value in articles %}
                 <li>
-                    <h2>{{ value.title }}</h2>
+                    <h2><a href="{{ url_for("article", art_id=id) }}">{{ value.title }}</a></h2>
                     <p>{{ value.content }}</p>
                 </li>
             {% endfor %}

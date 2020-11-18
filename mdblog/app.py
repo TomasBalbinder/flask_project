@@ -27,8 +27,10 @@ def articles():
 
 @app.route("/articles/<int:art_id>")
 def article(art_id):
-    article = articless[art_id]
-    return render_template("article.html", article=article)
+    article = articless.get(art_id)
+    if article:
+        return render_template("article.html", article=article)
+    return render_template("notfound.html", id=art_id)
 
 
 

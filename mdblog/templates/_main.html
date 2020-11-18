@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href={{url_for("static", filename="css/main.css")}}>
-    <title>{% block title %} {% endblock %}</title>
-</head>
-<body>
-    <header>
-        <h1><a href="{{ url_for("welcome_page") }}">Tomas Balbinder</a></h1>
-    </header>
-    <nav>
-        <ul class="nav">
-            <li><a href="{{ url_for("admin") }}">Admin</a></li>
-            <li><a href="{{ url_for("about") }}">About me</a></li>
-            <li><a href="{{ url_for("articles") }}">Articles</a></li>
-        </ul>
-    </nav>
+    <head>
+        <title>{% block title %} {% endblock %}</title>
+        {% include "_head.html" %}
+    </head>
+    <body>
+        <header>
+            <h1><a href="{{ url_for("welcome_page") }}">Tomas Balbinder</a></h1>
+        </header>
+        <nav>
+            {% include "_nav.html" %}
+        </nav>
 
-    <main>
+        <main>
+            {% block main %} {% endblock %}
+        </main>
 
-        {% block main %} {% endblock %}
-
-    </main>
-
-    {% block body %} {% endblock %}
-    <footer>
-
-        <p> (c) 2020 Tomas Balbinder</p>
-
-    </footer>
-
-
-</body>
+        <footer>
+            {% include "_footer.html" %}
+        </footer>
+    </body>
 </html>
