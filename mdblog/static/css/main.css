@@ -1,9 +1,11 @@
 body {
     padding: 0 20%;
+    
 }
 
 header {
     text-align: center;
+    
 }
 
 .nav {
@@ -21,8 +23,11 @@ header {
     display: inline-block;
     padding: 10px;
     text-decoration: none;
+   
 }
 
 footer {
     text-align: center;
+    
+    
 }
