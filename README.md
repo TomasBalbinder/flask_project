@@ -8,9 +8,10 @@ This project is open-source and everyone could taking and changing this code.
 ### how install
 
 Go to [website Python](https://www.python.org/downloads/)
-and download and install python 3.latest
+and download and install python **3.latest**
 acording to version operating system you have.
 
+Then run python and write down this command line: 
 `python3 pip install flask`
 
 
