@@ -11,6 +11,12 @@ Go to [website Python](https://www.python.org/downloads/)
 and download and install python **3.latest**
 acording to version operating system you have.
 
+
+I recommand use this program when you write your code.
+[Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows)
+ 
+
+
 Then run python and write down this command line: 
 `python3 pip install flask`
 
