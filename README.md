@@ -12,8 +12,8 @@ and download and install python **3.latest**
 acording to version operating system you have.
 
 
-I recommand use this program when you write your code.
-[Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows)
+>I recommand use this program when you write your code.
+>[Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows)
  
 
 
