@@ -5,7 +5,7 @@ Important thing in this project is uses framework **Flask**.
 This project is open-source and everyone could taking and changing this code.
 
 
-###how install###
+###how install
 
 Go to [website Python] (https://www.python.org/)
 
