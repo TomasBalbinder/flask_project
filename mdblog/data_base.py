@@ -1,17 +1,17 @@
 articless = {
 
     1: {
-        "title": "HELLO WORLD!",
+        "title": "FIRST ARTICLE",
         "content" : "This is a article about..."
     },
 
     2: {
-        "title": "HELLO WORLD!",
+        "title": "SECOND ARTICLE",
         "content": "This is a article about..."
     },
 
     3: {
-        "title": "HELLO WORLD!",
+        "title": "THIRD ARTICLE",
         "content" : "This is a article about..."
     },
 }

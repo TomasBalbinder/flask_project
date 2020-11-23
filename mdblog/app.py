@@ -10,8 +10,7 @@ from flask import session
 
 app = Flask(__name__)
 
-app.secret_key = b'\x1b@\xd3=\x03\xce3\xabJ<\t\xbd\x08\x17V\xae\xb8\xa3F\xdc\xf4\xb29\xb4'
-
+app.secret_key = b'7H{&\xa3\x92\xed\x86\xbe\xd4\x06U\xb1\x87s\xeb\x12Q\xd7\xf8Z/j\x92'
 
 @app.route("/")
 def welcome_page():
@@ -55,13 +54,17 @@ def login_user():
     if username == "admin" and password == "admin":
         session["logged"]=True
         return redirect(url_for("admin"))
-    else:
-        return redirect(url_for("login"))
 
+    else:
+        return render_template("fail_login.html")
 
 @app.route("/logout/", methods=["POST"])
 def logout():
-    return redirect(url_for("login"))
+    session.pop("logged")
+    return redirect(url_for("welcome_page"))
+
+
+
 
 
 

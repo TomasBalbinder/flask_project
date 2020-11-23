@@ -14,6 +14,10 @@ main{
 
 }
 
+li {
+    list-style-type: none;
+}
+
 
 .nav {
     padding: 0;
@@ -32,6 +36,15 @@ main{
     text-decoration: none;
    
 }
+
+
+.nav form{
+
+    display: inline-block;
+    padding: 10px;
+
+}
+
 
 footer {
     text-align: center;

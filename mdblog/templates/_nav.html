@@ -1,7 +1,15 @@
 
 
 <ul class="nav">
-                <li><a href="{{ url_for("admin") }}">Admin</a></li>
+                <li><a href="{{ url_for("admin") }}">Login</a></li>
                 <li><a href="{{ url_for("about") }}">About me</a></li>
                 <li><a href="{{ url_for("articles") }}">Articles</a></li>
+                {% if "logged" in session %}
+                   <li>
+                        <form action="{{url_for("logout")}}" method="post">
+                            <input type="submit" value="Logout">
+                        </form>
+                   </li>
+                {% endif %}
+
 </ul>
