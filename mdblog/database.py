@@ -1,4 +1,4 @@
-articless = {
+articles = {
 
     1: {
         "title": "FIRST ARTICLE",

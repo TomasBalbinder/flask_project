@@ -3,10 +3,14 @@
 from flask import url_for
 from flask import render_template
 from flask import Flask
-from .data_base import articless
 from flask import request
 from flask import redirect
 from flask import session
+from flask import g
+import sqlite3
+
+
+DATABASE = "blog.db"
 
 app = Flask(__name__)
 
@@ -31,12 +35,12 @@ def about():
 
 @app.route("/articles/")
 def articles():
-    return render_template("articles.html", articles=articless.items())
+    return render_template("articles.html", articles=articles.items())
 
 
 @app.route("/articles/<int:art_id>")
 def article(art_id):
-    article = articless.get(art_id)
+    article = articles.get(art_id)
     if article:
         return render_template("article.html", article=article)
     return render_template("notfound.html", id=art_id)
@@ -62,6 +66,32 @@ def login_user():
 def logout():
     session.pop("logged")
     return redirect(url_for("welcome_page"))
+
+
+
+def connect_db():
+    rv = sqlite3.connect("DATABASE")
+    rv.row_factory = sqlite3.Row
+    return rv
+
+
+def get_db():
+    if not hasattr(g, "sqlite_db"):
+        g.sqlite_db = connect_db()
+    return g.sqlite_db
+
+@app.teardown_appcontext
+def close_db(error):
+    if hasattr(g, "sqlite_db"):
+        g.sqlite_db.close()
+
+
+def init_db(appp):
+    with appp.app_context():
+        db = get_db()
+        with open("mdblog/schema.sql", "r") as fp:
+            db.cursor().executescript(fp.read())
+        db.commit()
 
 
 
