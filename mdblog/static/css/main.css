@@ -18,6 +18,9 @@ H1{
     text-shadow: 2px 0px black;
     opacity: 95%;
 
+    margin-bottom: 0mm;
+
+
 }
 
 a:visited {
@@ -53,7 +56,12 @@ li {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    text-align: center;
+    text-align: right;
+    margin: 100px;
+    margin-top: auto;
+    font-size: 20px;
+
+
 }
 
 .nav li {
@@ -91,12 +99,13 @@ footer {
     padding: 20px;
     margin: auto;
     border-radius: 15px;
+    opacity: 95%;
 }
 
 
 H2{
-
-    font-size: 30px;
+    text-align: center;
+    font-size: 40px;
 
 
 

@@ -7,12 +7,15 @@
     <body>
         <header>
             <h1><a class="black" href="{{ url_for("welcome_page") }}"> Free Projects </a></h1>
-            <h2>Helps for beginning developers</h2>
-        </header>
-        <nav>
-            {% include "_nav.html" %}
-        </nav>
 
+            <nav>
+                {% include "_nav.html" %}
+            </nav>
+
+        </header>
+
+
+        <h2>Helps for beginning developers</h2>
         <main>
             {% block main %} {% endblock %}
         </main>
