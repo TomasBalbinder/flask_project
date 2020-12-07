@@ -18,7 +18,7 @@ Then run python and write down this command line:
 `python3 pip install flask`
 
 
-![](screenshot.PNG)
+![](Capturea.PNG)
 
 ---
 
