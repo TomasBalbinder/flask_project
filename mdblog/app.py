@@ -8,6 +8,7 @@ from flask import redirect
 from flask import session
 from flask import g
 import sqlite3
+from flask import flash
 
 
 DATABASE = "blog.db"
@@ -70,14 +71,17 @@ def login_user():
     password = request.form["password"]
     if username == "admin" and password == "admin":
         session["logged"]=True
+        flash("Loggin Succesfull")
         return redirect(url_for("admin"))
 
     else:
-        return render_template("fail_login.html")
+        flash("wrong login")
+        return redirect(url_for("login"))
 
 @app.route("/logout/", methods=["POST"])
 def logout():
     session.pop("logged")
+    flash("Logout Success")
     return redirect(url_for("welcome_page"))
 
 
